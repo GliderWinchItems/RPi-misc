@@ -1,4 +1,5 @@
 
+
 # scripts/linux-can-setup
 # 
 # 06/20/2021
@@ -14,13 +15,23 @@ else
 fi
 pwd
 #
-git clone https://linux-can/can-utils
+# Get selected files from github repo
+git clone https://github.com/linux-can/can-utils
 
-git clone https://linux-can/can-misc
+git clone https://github.com/linux-can/can-misc
 
-git clone https://linux-can/can-tests
+git clone https://github.com/linux-can/can-tests
 
-git clone https://linux-can/socketcand
+git clone https://github.com/linux-can/socketcand
+#
+# Build 
+
+
+
+
+
+
+
 
 
 
