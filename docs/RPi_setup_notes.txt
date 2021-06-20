@@ -1,0 +1,8 @@
+docs/RPi_setup_notes.txt
+
+06/20/2021
+
+
+1. Setup RPi from the following video--
+https://www.youtube.com/watch?v=BpJCAafw2qE
+

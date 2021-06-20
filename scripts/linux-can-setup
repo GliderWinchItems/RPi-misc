@@ -1,0 +1,27 @@
+
+# scripts/linux-can-setup
+# 
+# 06/20/2021
+#
+# Repo root directory
+cd $HOME
+if "cd linux-can" ; then
+  pwd
+else
+   mkdir linux-can
+   cd linux-can
+   echo "made directory"
+fi
+pwd
+#
+git clone https://linux-can/can-utils
+
+git clone https://linux-can/can-misc
+
+git clone https://linux-can/can-tests
+
+git clone https://linux-can/socketcand
+
+
+
+
