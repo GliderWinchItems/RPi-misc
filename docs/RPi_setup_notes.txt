@@ -6,3 +6,57 @@ docs/RPi_setup_notes.txt
 1. Setup RPi from the following video--
 https://www.youtube.com/watch?v=BpJCAafw2qE
 
+2. cansetup file in ~/linux-can initializes the CAN0 and CAN1 interfaces.
+
+3. CAN0 and CAN1 should show in the following--
+ifconfig -a 
+
+4. MCP hardware oriented
+
+https://developer.ridgerun.com/wiki/index.php/How_to_configure_and_use_CAN_bus
+
+5. Temperature/thermal
+
+wellsca@cb0:~$ sudo /opt/vc/bin/vcgencmd measure_temp
+temp=51.6'C
+wellsca@cb0:~$ 
+
+6. Other commands
+
+https://www.raspberrypi.org/documentation/raspbian/applications/vcgencmd.md
+
+7.
+
+wellsca@cb0:~$ sudo hwclock --verbose
+hwclock from util-linux 2.33.1
+System Time: 1624499925.638066
+Trying to open: /dev/rtc0
+Using the rtc interface to the clock.
+Assuming hardware clock is kept in UTC time.
+Waiting for clock tick...
+ioctl(4, RTC_UIE_ON, 0): Invalid argument
+Waiting in loop for time from /dev/rtc0 to change
+...got clock tick
+Time read from Hardware Clock: 2021/06/24 01:58:47
+Hw clock time : 2021/06/24 01:58:47 = 1624499927 seconds since 1969
+Time since last adjustment is 1624499927 seconds
+Calculated Hardware Clock drift is 0.000000 seconds
+2021-06-24 02:58:46.615700+01:00
+wellsca@cb0:~$ 
+
+8.
+
+ Load CAN-bus (seeed stuff)
+  [rpi] echo >>/boot/config.txt 'dtoverlay=seeed-can-fd-hat-v2'
+  [rpi] reboot
+  [rpi] ip link show
+  [rpi] ifconfig -a
+  [rpi] sudo apt install can-utils
+  [rpi-X] sudo ip link set can0 type can bitrate 500000
+  [rpi-X] sudo ip link set can1 type can bitrate 500000
+  [rpi-X] sudo ip link set up can0
+  [rpi-X] sudo ip link set up can1
+  [rpi-1] candump can0
+  [rpi-0] cansend can0 123#1122334455667788
+
+  
