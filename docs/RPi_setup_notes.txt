@@ -59,4 +59,13 @@ wellsca@cb0:~$
   [rpi-1] candump can0
   [rpi-0] cansend can0 123#1122334455667788
 
-  
+  9. .ssh needs a config file for github ssh usage
+
+  https://blog.realhe.ro/clone-github-repo-without-password-using-ssh/
+
+  Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/github
+
+    
