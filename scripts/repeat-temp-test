@@ -1,0 +1,3 @@
+# Script to repeat temperature test
+while true;do vcgencmd measure_clock_arm;do vdgencmd measure_temp;sleep 10;done & stress -c 4 -t 900s
+ 
