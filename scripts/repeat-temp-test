@@ -1,3 +1,10 @@
 # Script to repeat temperature test
-while true;do vcgencmd measure_clock_arm;do vdgencmd measure_temp;sleep 10;done & stress -c 4 -t 900s
+x=0
+while [ $x -lt 10 ]
+do 
+    sudo vcgencmd measure_clock arm
+    sudo vcgencmd measure_temp
+    sleep 10
+    x=`expr $x + 1`
+done
  
