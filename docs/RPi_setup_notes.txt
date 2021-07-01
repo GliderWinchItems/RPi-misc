@@ -15,7 +15,7 @@ ifconfig -a
 
 https://developer.ridgerun.com/wiki/index.php/How_to_configure_and_use_CAN_bus
 
-5. Temperature/thermal
+5. Temperature/thermal--DO NOT FORGET 'sudo'
 
 wellsca@cb0:~$ sudo /opt/vc/bin/vcgencmd measure_temp
 temp=51.6'C
@@ -25,7 +25,7 @@ wellsca@cb0:~$
 
 https://www.raspberrypi.org/documentation/raspbian/applications/vcgencmd.md
 
-7.
+7. Seeed hw RTC
 
 wellsca@cb0:~$ sudo hwclock --verbose
 hwclock from util-linux 2.33.1
@@ -68,4 +68,4 @@ wellsca@cb0:~$
     User git
     IdentityFile ~/.ssh/github
 
-    
+
