@@ -1,0 +1,7 @@
+# candumpscriptall
+# command line to run candump and clean up extraneous output
+# 07/04/2021
+#
+sudo chrt -rr 45 hub-server localhost 32123 &
+sudo chrt -rr 44 ./candumpscruotbc &
+

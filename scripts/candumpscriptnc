@@ -1,0 +1,5 @@
+# candumpscriptnc
+# command line to run candump and clean up extraneous output
+# 07/04/2021
+#
+./candump can1 | awk '{ print $2 ; }' | grep '.\{12\}' | nc localhost 32123
