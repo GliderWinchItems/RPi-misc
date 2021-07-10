@@ -68,4 +68,22 @@ wellsca@cb0:~$
     User git
     IdentityFile ~/.ssh/github
 
+10. linux-can repo: can-tests
+
+Needs #include <linux/sockios.h> added to each .c file
+
+11.Two items wrt hub-server:
+
+0. We should be using version 9, not version 10_PRELEASE.
+
+1. we should be starting it something like this:
+
+   sudo nohup nice -n -15 hub-server $OTHER_ARGS 1>hub-server.out 2>hub_server.err &
+
+12. CAN write buffer length setup
+
+  sudo ifconfig can1 txqueuelen 1024; ./tst-raw -i can1 -s
+
+
+
 
